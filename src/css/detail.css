@@ -1,0 +1,52 @@
+.card-detail .card{
+    width: 600px;
+    text-align: left;
+    padding: 12px;
+    box-sizing: border-box;
+}
+
+.card-detail{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 80px;
+    padding-left: 30px;
+    padding-bottom: 80px;
+}
+
+.card-detail .card h1{
+    padding-top: 45px;
+    padding-bottom: 45px;
+}
+
+.card-detail .card p{
+    padding-bottom: 45px;
+}
+
+.card-img{
+    width: 300px;
+}
+
+.card-img img{
+    width: 300px;
+}
+
+.card-car .card{
+    width: 300px;
+}
+
+.card-car{
+    padding-left: 30px;
+}
+
+.card-car .card p{
+    text-decoration: bold;
+}
+
+.price{
+    display: flex;
+    justify-content: space-between;
+    width: 250px;
+    padding-left: 15px;
+    font-weight: bold;
+}
