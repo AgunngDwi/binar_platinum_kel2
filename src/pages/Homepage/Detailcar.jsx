@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react'
-import NavbarMain from '../components/NavbarMain'
-import HeroSection from '../components/HeroSection'
+import NavbarMain from '../../components/Homepage/NavbarMain'
+import HeroSection from '../../components/Homepage/HeroSection'
 import { useParams } from 'react-router-dom'
 import axios from 'axios'
-import Footer from '../components/Footer'
-import "../css/detail.css"
+import Footer from '../../components/Homepage/Footer'
+import "/src/css/Homepage/detail.css"
 
 const Detailcar = () => {
   const [data, setData] = useState({})

@@ -6,10 +6,11 @@ import {
   Link,
 } from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Homepage from "./pages/Homepage";
-import Findcar from "./pages/Findcar"
+import Homepage from "./pages/Homepage/Homepage";
+import Findcar from "./pages/Homepage/Findcar"
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Detailcar from "./pages/Detailcar";
+import Detailcar from "./pages/Homepage/Detailcar";
+// import './css/master.css'
 
 
 

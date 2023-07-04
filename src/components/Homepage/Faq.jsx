@@ -1,6 +1,6 @@
 import React from 'react'
 import { Accordion, Container } from 'react-bootstrap'
-import { FAQ } from '../helpers/Constan'
+import { FAQ } from '/src/helpers/Constan.js'
 
 const Faq = () => {
   return (
