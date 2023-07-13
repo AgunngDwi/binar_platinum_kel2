@@ -10,6 +10,7 @@ import Homepage from "./pages/Homepage/Homepage";
 import Findcar from "./pages/Homepage/Findcar"
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Detailcar from "./pages/Homepage/Detailcar";
+import AdminLogin from "./components/Admin/Login";
 // import './css/master.css'
 
 
@@ -22,6 +23,7 @@ function App() {
           <Route path="/" element={<Homepage />} />
           <Route path="cars/*" element={<Findcar />} />
           <Route path="/detail/:id" element={<Detailcar />} />
+          <Route path="/admin" element={<AdminLogin/>}/>
         </Routes>
       </BrowserRouter>
     </div>

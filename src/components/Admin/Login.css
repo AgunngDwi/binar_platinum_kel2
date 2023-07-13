@@ -1,0 +1,51 @@
+body {
+    background-color: #CFD4ED;
+}
+
+.admin-login-container {
+    max-width: 1440px;
+    height: 100vh;
+    margin: 0 auto;
+}
+
+.admin-login-parent {
+    height: 100vh;
+}
+
+.img-background {
+    background-color: blue;
+    padding-right: 0;
+    padding-left: 0;
+    position: relative;
+    overflow: hidden;
+    height: 100vh;
+}
+
+.img-background img {
+    
+    height: 100vh;
+    object-fit: cover;
+}
+
+.sign-in-wrapper {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.sign-in-wrapper-child {
+    margin-bottom: 16px;
+    /* margin-left: 4%; */
+}
+
+.sign-in-wrapper-child input {
+    width: 100%;
+}
+
+.logo {
+    width: 100px;
+    height: 34px;
+    background-color: #CFD4ED;
+    text-align: center;
+}
