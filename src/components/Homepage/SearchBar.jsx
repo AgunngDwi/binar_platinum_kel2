@@ -25,7 +25,7 @@ const SearchBar = () => {
       .then((res) => {
         setOriginalData(res.data.cars);
         setData(res.data.cars);
-        // console.log(res)
+        console.log(res)
       })
       .catch((err) => console.log(err));
   };
