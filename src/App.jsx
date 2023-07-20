@@ -25,7 +25,7 @@ function App() {
       {path: "/", element: <Homepage/>},
       {path: "/login", element: <Login/>},
       {path: "/register", element: <Register/>},
-      {path: "car/*", element: <Findcar/>},
+      {path: "/cars", element: <Findcar/>},
       {path: "/detail/:id", element: <Detailcar/>},
       {path: "/admin", element: <AdminLogin/>},
       {path: "/admin_dashboard", element: <AdminDashboard/>}
