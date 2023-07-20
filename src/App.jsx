@@ -15,6 +15,7 @@ import AdminLogin from "./components/Admin/Login";
 import AdminDashboard from "./components/Admin/Dashboard";
 import Login from "./components/User/Login";
 import Register from "./components/User/Register";
+import AdminAddCars from "./components/Admin/AddCars";
 // import './css/master.css'
 
 
@@ -27,8 +28,10 @@ function App() {
       {path: "/register", element: <Register/>},
       {path: "/cars", element: <Findcar/>},
       {path: "/detail/:id", element: <Detailcar/>},
+
       {path: "/admin", element: <AdminLogin/>},
       {path: "/admin_dashboard", element: <AdminDashboard/>}
+      {path: "/admin_add_cars", element:<AdminAddCars/>}
   ])
 
   return element
