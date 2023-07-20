@@ -30,7 +30,7 @@ function App() {
       {path: "/detail/:id", element: <Detailcar/>},
 
       {path: "/admin", element: <AdminLogin/>},
-      {path: "/admin_dashboard", element: <AdminDashboard/>}
+      {path: "/admin_dashboard", element: <AdminDashboard/>},
       {path: "/admin_add_cars", element:<AdminAddCars/>}
   ])
 
