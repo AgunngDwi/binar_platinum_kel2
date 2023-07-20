@@ -39,9 +39,18 @@ const AdminLogin = () => {
         localStorage.setItem("admin_token", res.data.access_token);
         localStorage.setItem("role", res.data.role);
         setLoad(false);
-        setTimeout(() => {
-          navigate("/admin_dashboard");
-        }, 3000);
+        const role = localStorage.getItem("role");
+        if (role==="Customer") {
+          setShownAlert(true);
+          localStorage.removeItem("admin_token");
+          localStorage.removeItem("role") 
+        }
+        if (role === "admin" || role === "Admin") {
+          setTimeout(() => {
+            navigate("/admin_dashboard");
+          }, 3000);
+        }
+        
       })
       .catch((err) => {
         console.log(err);
