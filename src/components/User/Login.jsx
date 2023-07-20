@@ -46,11 +46,14 @@ const Login = () => {
   return (
     <div>
     <Container className='login-user-container'>
-        <div>
+      <div className='login-logo'>
+        
+      </div>
+        <div className='login-tittle'>
             <h1>Welcome Back!</h1>
         </div>
         <div className='login-input'>
-          <label htmlFor="">Email</label><br />
+          <label htmlFor="">Email</label>
           <input 
           type="text"  
           placeholder='johndee@gmail.com'
@@ -60,9 +63,9 @@ const Login = () => {
           />
         </div>
         <div className='login-input'>
-          <label htmlFor="">Password</label><br />
+          <label htmlFor="">Password</label>
           <input 
-          type="text" 
+          type="password" 
           placeholder='6+ karakter' 
           onChange={handleChange}
           value={form.password}
@@ -72,7 +75,7 @@ const Login = () => {
         </div><br />
         <div className='signup-account'>
           <a>Don't Have Account? </a>
-          <a href="">Sign Up for Free</a>
+          <a href="/register" >Sign Up for  Free</a>
         </div>
     </Container>
     </div>
