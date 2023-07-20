@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Button, Container } from 'react-bootstrap'
+import { Button, Col, Container, Row } from 'react-bootstrap'
 import "./LoginUser.css"
 import { useNavigate } from 'react-router'
 import axios from 'axios'
@@ -44,39 +44,48 @@ const Login = () => {
 
 
   return (
-    <div>
-    <Container className='login-user-container'>
-      <div className='login-logo'>
-        
-      </div>
-        <div className='login-tittle'>
-            <h1>Welcome Back!</h1>
-        </div>
-        <div className='login-input'>
-          <label htmlFor="">Email</label>
-          <input 
-          type="text"  
-          placeholder='johndee@gmail.com'
-          onChange={handleChange}
-          value={form.email}
-          name='email'
-          />
-        </div>
-        <div className='login-input'>
-          <label htmlFor="">Password</label>
-          <input 
-          type="password" 
-          placeholder='6+ karakter' 
-          onChange={handleChange}
-          value={form.password}
-          name='password'
-          /><br/>
-        <Button variant='primary' onClick={handleSubmit}>{load? "loading..." : "Sign in"}</Button>
-        </div><br />
-        <div className='signup-account'>
-          <a>Don't Have Account? </a>
-          <a href="/register" >Sign Up for  Free</a>
-        </div>
+    <div className='login-user-container'>
+    <Container >
+      <Row className='login-parent'>
+        <Col className='login-wrapper'>
+            <div className='login-logo'>
+              
+            </div>
+              <div className='login-tittle'>
+                  <h1>Welcome Back!</h1>
+              </div>
+              <div className='login-input'>
+                <label htmlFor="">Email</label>
+                <input 
+                type="text"  
+                placeholder='johndee@gmail.com'
+                onChange={handleChange}
+                value={form.email}
+                name='email'
+                />
+              </div>
+              <div className='login-input'>
+                <label htmlFor="">Password</label>
+                <input 
+                type="password" 
+                placeholder='6+ karakter' 
+                onChange={handleChange}
+                value={form.password}
+                name='password'
+                /><br/>
+              <Button variant='primary' onClick={handleSubmit}>{load? "loading..." : "Sign in"}</Button>
+              </div><br />
+              <div className='signup-account'>
+                <a>Don't Have Account? </a>
+                <a href="/register" >Sign Up for  Free</a>
+              </div>
+          </Col>
+          <Col className='image-wrapper'>
+              <div className='image-background'>
+                <img src="/src/assets/img/backgroundSign.svg" alt="" />
+              </div>
+          </Col>
+      </Row>
     </Container>
     </div>
     
