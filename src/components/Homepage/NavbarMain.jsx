@@ -1,10 +1,26 @@
 import React from 'react'
+import { Button } from 'react-bootstrap';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import Offcanvas from 'react-bootstrap/Offcanvas';
+import { Navigate, useNavigate } from 'react-router';
+
 
 const NavbarMain = () => {
+  const navigate = useNavigate()
+
+  const handleLogin = () => {
+    navigate('/login')
+  }
+
+  const role = localStorage.getItem("role")
+
+  const handleLogout = () => {
+    localStorage.clear()
+    window.location.reload(false)
+  }
+
   return (
     <div className='navbar-container'>
     <Container >
@@ -28,6 +44,10 @@ const NavbarMain = () => {
                   <Nav.Link href="#action2">Why Us</Nav.Link>
                   <Nav.Link href="#action3">Testimonial</Nav.Link>
                   <Nav.Link href="#action4">FAQ</Nav.Link>
+                  {!role && <Button variant='success' onClick={handleLogin}>Login</Button>}
+                  {!role && <Button variant='primary'>Register</Button>}
+                  {role && <Nav.Link>Hai,{role}</Nav.Link>}
+                  {role && <Button variant='danger' onClick={handleLogout}>Logout</Button>}
                 </Nav>
               </Offcanvas.Body>
             </Navbar.Offcanvas>

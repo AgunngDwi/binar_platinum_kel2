@@ -12,6 +12,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Detailcar from "./pages/Homepage/Detailcar";
 import AdminLogin from "./components/Admin/Login";
 import AdminDashboard from "./components/Admin/Dashboard";
+import Login from "./components/User/Login";
 // import './css/master.css'
 
 
@@ -22,6 +23,7 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Homepage />} />
+          <Route path="/login" element={<Login />} />
           <Route path="cars/*" element={<Findcar />} />
           <Route path="/detail/:id" element={<Detailcar />} />
           <Route path="/admin" element={<AdminLogin/>}/>

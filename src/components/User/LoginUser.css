@@ -1,0 +1,23 @@
+
+.login-user-container{
+    margin: 0 auto;
+    width: 50%;
+}
+
+.login-input{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.signup-account{
+    display: flex;
+    margin-top: 10px;
+    justify-content: center;
+    font-size: 15px;
+    gap: 2px;
+}
+
+
+
