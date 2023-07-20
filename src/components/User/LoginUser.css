@@ -1,7 +1,10 @@
 
 .login-user-container{
-    margin: 0 auto;
-    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* align-items: center; */
+    min-height: 100vh;
 }
 
 .login-input{
@@ -17,6 +20,18 @@
     justify-content: center;
     font-size: 15px;
     gap: 2px;
+}
+
+.login-tittle h1{
+    padding-bottom: 50px;
+}
+
+.login-logo{
+    background-color: rgba(207, 212, 237, 1);
+    width: 100px;
+    height: 34px;
+    box-sizing: border-box;
+    margin-bottom: 32px;
 }
 
 

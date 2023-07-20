@@ -14,6 +14,11 @@ const NavbarMain = () => {
     navigate('/login')
   }
 
+  const handleRegister = () => {
+    navigate("/register")
+  }
+
+
   const role = localStorage.getItem("role")
 
   const handleLogout = () => {
@@ -45,7 +50,7 @@ const NavbarMain = () => {
                   <Nav.Link href="#action3">Testimonial</Nav.Link>
                   <Nav.Link href="#action4">FAQ</Nav.Link>
                   {!role && <Button variant='success' onClick={handleLogin}>Login</Button>}
-                  {!role && <Button variant='primary'>Register</Button>}
+                  {!role && <Button variant='primary' onClick={handleRegister}>Register</Button>}
                   {role && <Nav.Link>Hai,{role}</Nav.Link>}
                   {role && <Button variant='danger' onClick={handleLogout}>Logout</Button>}
                 </Nav>
