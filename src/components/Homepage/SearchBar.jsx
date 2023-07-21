@@ -75,7 +75,7 @@ const redirect = (id) => {
         <div className="search-category">
           <label htmlFor="category">Kategori</label>
           <select name="list-category" id="category" value={category} onChange={handleCategoryChange}>
-            <option value="" ></option>
+            <option value=""></option>
             <option value="small">2 - 4 orang</option>
             <option value="medium">4 - 6 orang</option>
             <option value="large">6 - 8 orang</option>
@@ -89,8 +89,8 @@ const redirect = (id) => {
           <label htmlFor="isRented">Status</label>
           <select name="list-is-rented" id="isRented" value={isRented} onChange={handleIsRentedChange}> 
             <option value=""></option>
-            <option value='true'>Rented</option>
-            <option value='false'>Not Rented</option>
+            <option value='true'>Disewa</option>
+            <option value='false'>Tidak Disewa</option>
           </select>
         </div>
         <div className="search-buttons">

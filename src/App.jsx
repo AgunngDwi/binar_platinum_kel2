@@ -13,6 +13,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Detailcar from "./pages/Homepage/Detailcar";
 import Login from "./components/User/Login";
 import Register from "./components/User/Register";
+import ProtectedLogin from "./components/User/ProtectLogin";
+import ProtectedChooseCar from "./components/User/ProtectChooseCar";
 // import './css/master.css'
 
 
@@ -21,10 +23,10 @@ function App() {
 
   let element = useRoutes ([
       {path: "/", element: <Homepage/>},
-      {path: "/login", element: <Login/>},
-      {path: "/register", element: <Register/>},
+      {path: "/login", element: <ProtectedLogin><Login/></ProtectedLogin>},
+      {path: "/register", element: <ProtectedLogin><Register/></ProtectedLogin>},
       {path: "/cars", element: <Findcar/>},
-      {path: "/detail/:id", element: <Detailcar/>},
+      {path: "/detail/:id", element: <ProtectedChooseCar><Detailcar/></ProtectedChooseCar>},
 
   ])
 

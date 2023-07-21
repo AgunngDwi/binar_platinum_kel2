@@ -1,9 +1,7 @@
-.register-user-container{
+.register-parent{
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    /* align-items: center; */
-    min-height: 100vh;
+    flex-direction: row;
+    align-items: center;
 }
 
 .register-input{
@@ -11,6 +9,7 @@
     flex-direction: column;
     justify-content: center;
     margin-top: 10px;
+    width: 370px;
 }
 
 .register-account{
@@ -31,4 +30,9 @@
     height: 34px;
     box-sizing: border-box;
     margin-bottom: 32px;
+}
+
+.image-wrapper img {
+    width: 100vh;
+    height: 100vh;
 }

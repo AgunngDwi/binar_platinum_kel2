@@ -32,7 +32,8 @@ const Login = () => {
               localStorage.setItem("token", res.data.access_token)
               localStorage.setItem("role", res.data.role)
               setSucc(alert("ANDA BERHASIL LOGIN"))
-              navigate ('/')
+              window.location.reload(false)
+              // navigate ('/')
       })
       .catch ((err) => {
         if (err.code === "ERR_BAD_REQUEST"){
@@ -45,7 +46,7 @@ const Login = () => {
 
   return (
     <div className='login-user-container'>
-    <Container >
+    <Container>
       <Row className='login-parent'>
         <Col className='login-wrapper'>
             <div className='login-logo'>
@@ -81,9 +82,8 @@ const Login = () => {
               </div>
           </Col>
           <Col className='image-wrapper'>
-              <div className='image-background'>
-                <img src="/src/assets/img/backgroundSign.svg" alt="" />
-              </div>
+              <img src="/src/assets/img/backgroundSign.svg" alt="" />
+                
           </Col>
       </Row>
     </Container>
