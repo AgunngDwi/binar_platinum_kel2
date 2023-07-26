@@ -1,52 +1,71 @@
-.card-detail .card{
-    width: 600px;
-    text-align: left;
-    padding: 12px;
-    box-sizing: border-box;
+.btn.disabled, .btn:disabled, fieldset:disabled .btn{
+    pointer-events: auto;
 }
 
-.card-detail{
+.card-img-top {
+    width: 405px;
+    height: 216px;
+}
+
+.card-car.card{
+    width: 407px;
+    height: 482px;
+}
+
+.card-detail.card{
+    width: 605px;
+    height: 618px;
+}
+
+.card-title.h5{
+    font-size: 14px;
+    font-family: arial;
+    font-weight: 700;
+    line-height: 20px;
+}
+
+.card-subtitle.h6{
+    font-family: Arial;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+}
+
+.card-text li{
+    font-family: Arial;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 24.5px;
+    color: rgba(138, 138, 138, 1);
+}
+
+.car-category.card-text{
     display: flex;
-    align-items: center;
-    justify-content: center;
-    padding-top: 80px;
-    padding-left: 30px;
-    padding-bottom: 80px;
+    gap: 10px;
+    font-family: Arial;
+    font-weight: 700;
+    line-height: 14px;
+    font-size: 10px;
+    color: rgba(138, 138, 138, 1);
 }
 
-.card-detail .card h1{
-    padding-top: 45px;
-    padding-bottom: 45px;
+
+.label-card{
+    margin-top: 18px;
+    font-size: 12px;
+    font-family: Rubick;
+    line-height: 18px;
+    font-weight: 300;
+    color: grey;
 }
 
-.card-detail .card p{
-    padding-bottom: 45px;
+.price-car.card-title.h5{
+    margin-top: 24px;
+    margin-bottom: 24px;
 }
 
-.card-img{
-    width: 300px;
-}
-
-.card-img img{
-    width: 300px;
-}
-
-.card-car .card{
-    width: 300px;
-}
-
-.card-car{
-    padding-left: 30px;
-}
-
-.card-car .card p{
-    text-decoration: bold;
-}
-
-.price{
-    display: flex;
-    justify-content: space-between;
-    width: 250px;
-    padding-left: 15px;
-    font-weight: bold;
+.button-card.btn{
+    width: 358px;
+    border-radius: 2px;
+    padding: 8px 12px 8px 12px;
 }

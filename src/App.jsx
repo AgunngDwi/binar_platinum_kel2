@@ -15,6 +15,8 @@ import Login from "./components/User/Login";
 import Register from "./components/User/Register";
 import ProtectedLogin from "./components/User/ProtectLogin";
 import ProtectedChooseCar from "./components/User/ProtectChooseCar";
+import 'rsuite/dist/rsuite.min.css';
+import Payment from "./pages/Homepage/Payment";
 // import './css/master.css'
 
 
@@ -27,6 +29,7 @@ function App() {
       {path: "/register", element: <ProtectedLogin><Register/></ProtectedLogin>},
       {path: "/cars", element: <Findcar/>},
       {path: "/detail/:id", element: <ProtectedChooseCar><Detailcar/></ProtectedChooseCar>},
+      {path: "/payment/:id", element: <ProtectedChooseCar><Payment/></ProtectedChooseCar>},
 
   ])
 

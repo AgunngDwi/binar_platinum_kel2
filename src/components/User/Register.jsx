@@ -35,6 +35,7 @@ const Register = () => {
             'https://api-car-rental.binaracademy.org/customer/auth/register', data
         )
         .then((res) => {
+          console.log(res)
             if (res.status === 201) {
                 setSucc(alert("Berhasil membuat akun, silahkan login"))
             }
