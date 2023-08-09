@@ -75,7 +75,7 @@ const redirect = (id) => {
         <div className="search-category">
           <label htmlFor="category">Kategori</label>
           <select name="list-category" id="category" value={category} onChange={handleCategoryChange}>
-            <option value=""></option>
+            <option value="" >Silahkan pilih kategori</option>
             <option value="small">2 - 4 orang</option>
             <option value="medium">4 - 6 orang</option>
             <option value="large">6 - 8 orang</option>

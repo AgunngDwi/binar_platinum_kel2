@@ -1,0 +1,17 @@
+.box-detail.container{
+    top: -50px;
+    box-sizing: border-box;
+    background-color: #ffff;
+    height: 124px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15);
+    padding: 24px;
+}
+
+.tittle-box{
+    margin-bottom: 8px;
+}
+
+.subtittle-box{
+    margin-bottom: 8px;
+}

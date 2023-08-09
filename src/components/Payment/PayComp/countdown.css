@@ -1,0 +1,74 @@
+.row-wrapper{
+    gap: 32px;
+}
+
+
+.countdown-wrapper{
+    box-sizing: border-box;
+    height: 96px;
+    border-radius: 8px;
+    margin-top: 40px;
+    background-color: #ffff;
+    box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.15);
+    padding: 24px;
+}
+
+.transfer-wrapper{
+    box-sizing: border-box;
+    height: 278px;
+    box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.15);
+    padding: 24px;
+    background-color: #ffff;
+    border-radius: 8px;
+    margin-top: 24px;
+}
+
+.tutor-wrapper{
+    box-sizing: border-box;
+    height: 370px;
+    box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.15);
+    padding: 24px;
+    background-color: #ffff;
+    border-radius: 8px;
+    margin-top: 24px;
+}
+
+.confirm-wrapper{
+    box-sizing: border-box;
+    height: 148px;
+    box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.15);
+    padding: 24px;
+    background-color: #ffff;
+    border-radius: 8px;
+    margin-top: 40px;
+}
+
+.button-confirm.btn{
+    width: 100%;
+    border-radius: 2px;
+}
+
+.countdown-payment{
+    display: flex;
+    justify-content: end;
+    color: red;
+    font-size: larger;
+}
+
+.countdown-upload{
+    /* display: flex; */
+    justify-content: center;
+    color: red;
+    /* font-size: small; */
+}
+
+.confirm-wrapper1{
+    box-sizing: border-box;
+    width: 405px;
+    height: 474px;
+    box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.15);
+    padding: 24px;
+    background-color: #ffff;
+    border-radius: 8px;
+    margin-top: 40px;
+}

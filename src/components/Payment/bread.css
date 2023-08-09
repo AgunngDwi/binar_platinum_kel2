@@ -1,0 +1,19 @@
+.bread-comp{
+    display: flex;
+    color: black;
+    align-items: center;
+    justify-content: end;
+    height: 206px;
+}
+
+.back-page {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 16px;
+    height: 206px;
+}
+
+.breadcrumb-container{
+    background-color: #F1F3FF;
+}

@@ -27,7 +27,7 @@ const Detailcar = () => {
     const api = `https://api-car-rental.binaracademy.org/customer/car/${id}`
 
     axios
-    .get(api)
+    .get(api) 
     .then((res) => {
       setData(res.data)
       console.log(res)
@@ -37,6 +37,10 @@ const Detailcar = () => {
 
     useEffect(() => {
       getDetailData()
+      setForm({
+        ...form,
+        car_id: parseInt(id)
+      })
     }, [])
 
 
@@ -44,7 +48,7 @@ const Detailcar = () => {
     if (dates && dates[0] && dates[1]) {
       setForm({
         ...form,
-        start_rent_at: dates[0].toISOString().split('T')[0],
+        start_rent_at: dates[0].toISOString().split('T')[0], //convert ke string lalu pisahkan timezone
         finish_rent_at: dates[1].toISOString().split('T')[0]
       });
       setIsDateSelected(true);
@@ -65,16 +69,23 @@ const Detailcar = () => {
         car_id: form.car_id
     }
 
-    const token = localStorage.getItem("token")
-    const config = {
-      headers: {
-        token: token
-      }
-    }
+    // const token = localStorage.getItem("token")
+    // const config = {
+    //   headers: {
+    //     token: token
+    //   }
+    // }
 
     axios
-    .post('https://api-car-rental.binaracademy.org/customer/order', data, config)
-    .then((res) => console.log(res))
+    .post('https://api-car-rental.binaracademy.org/customer/order', data, {
+      headers: {
+        access_token : localStorage.getItem("token")
+      }
+    })
+    .then((res) => {
+      const orderId = res.data.id
+      navigate(`/payment/${orderId}`)
+    })
     .catch((err) => console.log(err))
   }
 
@@ -87,7 +98,7 @@ const Detailcar = () => {
       case 'small':
         return '2 - 4 orang';
       default:
-        return category; // If the category doesn't match any of the cases, return the original category value
+        return category;
     }
   };
 
@@ -140,7 +151,7 @@ const Detailcar = () => {
               </Col>
                 <Col>
                     <Card className='card-car' >
-                      <Card.Img variant='top' src={data.image}/>
+                      <Card.Img variant='top' className='img-detail' src={data.image}/>
                       <Card.Body>
                         <Card.Title>{data.name}</Card.Title>
                         <Card.Text className='car-category'>
@@ -150,7 +161,7 @@ const Detailcar = () => {
                         <label className="label-card"
                         htmlFor="">Tentukan lama sewa mobil (max. 7hari)
                         </label>
-                        <DateRangePicker 
+                        <DateRangePicker
                         disabledDate={combine(allowedMaxDays(7), beforeToday())} 
                         showOneCalendar 
                         placeholder="Pilih tanggal mulai dan tanggal akhir sewa"

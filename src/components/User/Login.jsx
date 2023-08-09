@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Button, Col, Container, Row } from 'react-bootstrap'
+import { Button, Col, Container, Image, Row } from 'react-bootstrap'
 import "./LoginUser.css"
 import { useNavigate } from 'react-router'
 import axios from 'axios'

@@ -2,7 +2,7 @@
     pointer-events: auto;
 }
 
-.card-img-top {
+.card-img-top.img-detail {
     width: 405px;
     height: 216px;
 }
