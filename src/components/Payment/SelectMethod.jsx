@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Button, Card, Col, Container, Row } from "react-bootstrap";
 import "/src/components/Payment/selectMethod.css";
 import { useNavigate, useParams } from "react-router-dom";
@@ -30,6 +30,29 @@ const SelectMethod = ({ data }) => {
   const dayDifference = dayRent(data?.start_rent_at, data?.finish_rent_at);
   const totalDayRent = dayDifference + 1;
 
+  const bank = [
+    {
+      idBank: 1,
+      name: "BCA",
+      fullName: "BCA Transfer",
+    },
+    {
+      idBank: 2,
+      name: "BNI",
+      fullName: "BNI Transfer",
+    },
+    {
+      idBank: 3,
+      name: "Mandiri",
+      fullName: "Mandiri Transfer",
+    },
+  ];
+  const [selectedBank, setSelectedBank] = useState(null);
+
+  const handleSelect = (bank) => {
+    setSelectedBank(bank);
+  };
+
   const handlePay = () => {
     navigate(`/payment/confirm/${id}`);
   };
@@ -40,14 +63,30 @@ const SelectMethod = ({ data }) => {
         <Row className="selectMethod-wrapper">
           <Col className="payment-method">
             <h3>Pilih Bank Transfer</h3>
-            <p>
+            <p style={{ marginBottom: "44px" }}>
               Kamu bisa membayar dengan transfer melalui ATM, Internet Banking
               atau Mobile Banking
             </p>
-            <h3>BCA Transfer</h3>
-            <h3>BNI Transfer</h3>
-            <h3>Mandiri Transfer</h3>
+            {bank.map((item) => (
+              <div className="selection-bank" key={item.idBank}>
+                <p className="bank-name">{item.name}</p>
+                <button
+                  onClick={() => handleSelect(item.idBank)}
+                  className="bank-button"
+                >
+                  {item.fullName}
+                  <div className="checklist">
+                    {selectedBank === item.idBank ? (
+                      <img src="/src/assets/icon/fi_check.png" />
+                    ) : (
+                      ""
+                    )}
+                  </div>
+                </button>
+              </div>
+            ))}
           </Col>
+
           <Col className="payment-detail">
             <p className="tittle-detail-payment1">{data?.Car?.name}</p>
             <p style={{ color: "#8A8A8A" }}>
@@ -60,7 +99,9 @@ const SelectMethod = ({ data }) => {
             </p>
             <div className="total-price-order">
               <p style={{ marginBottom: "18px" }}>Total</p>
-              <p style={{ fontWeight: "700" }}>Rp.{data?.total_price}</p>
+              <p style={{ fontWeight: "700" }}>
+                Rp.{data?.total_price?.toLocaleString("id-ID")}
+              </p>
             </div>
             <p
               className="tittle-detail-payment1"
@@ -70,9 +111,10 @@ const SelectMethod = ({ data }) => {
             </p>
             <div className="detail-price-order">
               <li>
-                Sewa Mobil Rp.{data?.Car?.price} x {totalDayRent}{" "}
+                Sewa Mobil Rp.{data?.Car?.price?.toLocaleString("id-ID")} x{" "}
+                {totalDayRent}{" "}
               </li>
-              <p>Rp.{data?.total_price}</p>
+              <p>Rp.{data?.total_price?.toLocaleString("id-ID")}</p>
             </div>
             <p
               className="tittle-detail-payment1"
@@ -98,11 +140,12 @@ const SelectMethod = ({ data }) => {
             <li>Tol dan parkir</li>
             <div className="total-price-order" style={{ fontWeight: "700" }}>
               <p>Total</p>
-              <p>Rp.{data?.total_price}</p>
+              <p>Rp.{data?.total_price?.toLocaleString("id-ID")}</p>
             </div>
             <Button
               className="btn-payment1"
-              variant="success"
+              variant={selectedBank ? "success" : "secondary"}
+              disabled={!selectedBank}
               onClick={handlePay}
             >
               Bayar

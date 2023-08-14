@@ -59,3 +59,42 @@
     margin-right: 7px;
     margin-bottom: 8px;
 }
+
+.selection-bank{
+    display: flex;
+    box-sizing: border-box;
+    border: 1px solid;
+    border-color: #FFF;
+    border-bottom-color: rgba(208, 208, 208, 1);
+    margin-bottom: 16px;
+    gap: 16px;
+    padding-bottom: 16px;
+}
+
+.bank-name{
+    display: flex;
+    box-sizing: border-box;
+    width: 65px;
+    font-size: 12px;
+    font-weight: 400;
+    padding: 6px;
+    line-height: 18px;
+    border-radius: 4px;
+    border: 1px solid var(--neutral-02, #D0D0D0);
+    background: var(--neutral-01, #FFF);
+    align-items: center;
+    justify-content: center;
+}
+
+.bank-button{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    line-height: 18px;
+    font-size: 12px;
+    font-weight: 400;
+    background-color: #FFF;
+}
+
+

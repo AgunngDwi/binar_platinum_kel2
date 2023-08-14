@@ -69,25 +69,22 @@ const Detailcar = () => {
   };
 
   const handlePayment = () => {
-    const data = {
+    const formData = {
       start_rent_at: form.start_rent_at,
       finish_rent_at: form.finish_rent_at,
       car_id: form.car_id,
     };
 
-    // const token = localStorage.getItem("token")
-    // const config = {
-    //   headers: {
-    //     token: token
-    //   }
-    // }
-
     axios
-      .post("https://api-car-rental.binaracademy.org/customer/order", data, {
-        headers: {
-          access_token: localStorage.getItem("token"),
-        },
-      })
+      .post(
+        "https://api-car-rental.binaracademy.org/customer/order",
+        formData,
+        {
+          headers: {
+            access_token: localStorage.getItem("token"),
+          },
+        }
+      )
       .then((res) => {
         const orderId = res.data.id;
         navigate(`/payment/${orderId}`);
@@ -181,7 +178,7 @@ const Detailcar = () => {
                   Tentukan lama sewa mobil (max. 7hari)
                 </label>
                 <DateRangePicker
-                  disabledDate={combine(allowedMaxDays(7), beforeToday())}
+                  shouldDisableDate={combine(allowedMaxDays(7), beforeToday())}
                   showOneCalendar
                   placeholder="Pilih tanggal mulai dan tanggal akhir sewa"
                   onChange={handleDateSelect}

@@ -11,6 +11,9 @@ const CountdownComp = () => {
   const [selectImg, setSelectImg] = useState(null);
   const [previewImg, setPreviewImg] = useState(null);
   const [visibleCount, setIsVisibleCount] = useState(false);
+  const today = new Date();
+  const expDate = new Date(today);
+  expDate.setDate(expDate.getDate() + 1);
 
   const rendered = ({ hours, minutes, seconds, completed }) => {
     if (completed) {
@@ -42,7 +45,14 @@ const CountdownComp = () => {
             <Row className="countdown-wrapper">
               <Col>
                 <h6>Selesaikan Pembayaran Sebelum</h6>
-                <p>Rabu, 19 Mei 2023 Jam 13.00 WIB</p>
+                <p>
+                  {expDate.toLocaleDateString("id-ID", {
+                    weekday: "long",
+                    day: "numeric",
+                    month: "long",
+                    year: "numeric",
+                  })}
+                </p>
               </Col>
               {!visibleCount && (
                 <Col className="countdown-payment">
