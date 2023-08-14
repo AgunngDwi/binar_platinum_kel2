@@ -15,7 +15,6 @@
 
 .transfer-wrapper{
     box-sizing: border-box;
-    height: 278px;
     box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.15);
     padding: 24px;
     background-color: #ffff;
@@ -50,16 +49,16 @@
 
 .countdown-payment{
     display: flex;
+    align-items: center;
     justify-content: end;
-    color: red;
+    /* color: red; */
     font-size: larger;
 }
 
 .countdown-upload{
-    /* display: flex; */
-    justify-content: center;
-    color: red;
-    /* font-size: small; */
+    /* color: red; */
+    font-size: 14px;
+    line-height: 20px;
 }
 
 .confirm-wrapper1{
@@ -72,3 +71,69 @@
     border-radius: 8px;
     margin-top: 40px;
 }
+
+.tittle-countPage{
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 20px;
+}
+
+.confirm-countUpload{
+    display: flex;
+    justify-content: space-between;
+}
+
+.transfer-name{
+    display: flex;
+    gap: 16px;
+    align-items: center;
+}
+
+.bank-name1{
+    display: flex;
+    flex-direction: column;
+    padding-top: 20px;
+}
+
+.number-account{
+    display: flex;
+    flex-direction: column;
+    margin-top: 16px;
+    gap: 8px;
+}
+
+.number-account label{
+    font-size: 12px;
+    gap: 4px;
+}
+
+button.nav-link {
+    color: black;
+}
+
+.method-inst li{
+    margin-top: 10px;
+    color: #8A8A8A;
+}
+
+.method-inst p{
+    margin-top: 10px;
+    color: #8A8A8A;
+    margin-left: 18px;
+}
+
+.totalPrice-input{
+    display: flex;
+    font-weight: 700;
+    padding: 9px 12px;
+    border-radius: 2px;
+    border: 1px solid var(--neutral-04, #3C3C3C)
+}
+
+.account-input{
+    font-weight: 300;
+    padding: 9px 12px;
+    border-radius: 2px;
+    border: 1px solid var(--neutral-04, #3C3C3C)
+}
+

@@ -19,6 +19,8 @@ const SelectMethod = ({ data }) => {
     }
   };
 
+  console.log(data);
+
   const dayRent = (startDate, endDate) => {
     const startRent = new Date(startDate);
     const finishRent = new Date(endDate);
@@ -54,7 +56,9 @@ const SelectMethod = ({ data }) => {
   };
 
   const handlePay = () => {
-    navigate(`/payment/confirm/${id}`);
+    navigate(`/payment/confirm/${id}`, {
+      state: { selectedBank },
+    });
   };
 
   return (
@@ -71,12 +75,12 @@ const SelectMethod = ({ data }) => {
               <div className="selection-bank" key={item.idBank}>
                 <p className="bank-name">{item.name}</p>
                 <button
-                  onClick={() => handleSelect(item.idBank)}
+                  onClick={() => handleSelect(item)}
                   className="bank-button"
                 >
                   {item.fullName}
                   <div className="checklist">
-                    {selectedBank === item.idBank ? (
+                    {selectedBank && selectedBank.idBank === item.idBank ? (
                       <img src="/src/assets/icon/fi_check.png" />
                     ) : (
                       ""
