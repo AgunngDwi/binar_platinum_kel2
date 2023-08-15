@@ -393,8 +393,15 @@ div.container{
     font-weight: 700;
     font-size: 14px;
     line-height: 20px;
+    margin-bottom: 24px;
 }
 
+.pilih-mobil{
+    width: 100%;
+    border-radius: 2px;
+    background-color: #5CB85F;
+    border-color: #5CB85F;
+}
 
 
 

@@ -52,9 +52,7 @@ const SearchBar = () => {
         .includes(carName.toLowerCase());
       const isCategoryMatch = category ? car.category === category : true;
       const isPriceMatch = price ? car.price === parseInt(price) : true;
-      const isRentedMatch = isRented
-        ? car.isRented.toString() === isRented
-        : true;
+      const isRentedMatch = car.status.toString() === isRented;
 
       return isCarNameMatch && isCategoryMatch && isPriceMatch && isRentedMatch;
     });
@@ -131,14 +129,18 @@ const SearchBar = () => {
                 <Card.Body>
                   <Card.Title className="card1">{item.name}</Card.Title>
                   <Card.Text className="card2">
-                    Rp.{item.price} / hari
+                    Rp. {item.price.toLocaleString("id-ID")} / hari
                   </Card.Text>
                   <Card.Text className="card3">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                     do eiusmod tempor incididunt ut labore et dolore magna
                     aliqua.
                   </Card.Text>
-                  <Button variant="success" onClick={() => redirect(item.id)}>
+                  <Button
+                    className="pilih-mobil"
+                    variant="success"
+                    onClick={() => redirect(item.id)}
+                  >
                     {" "}
                     Pilih Mobil
                   </Button>
