@@ -1,0 +1,79 @@
+.ticket-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.successPay-wrap{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 16px;
+    margin-top: 40px;
+}
+
+.successPay-wrap img{
+    width: 80px;
+    height: 80px;
+}
+
+.successPay-wrap h6 {
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 20px;
+    color: black;
+}
+
+.successPay-wrap p{
+    color: #8A8A8A;
+    text-align: center;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+}
+
+.box-successWrap{
+    display: flex;
+    margin-top: 40px;
+    width: 605px;
+    border-radius: 8px;
+    box-sizing: border-box;
+    box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.15);
+    padding: 24px;
+}
+
+.tittle-download{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: start;
+    gap: 16px;
+}
+
+.download-button{
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    align-items: center ;
+}
+
+.download-button button{
+    display: inline-flex;
+    gap: 10px;
+    border: 1px solid #0D28A6;
+    border-radius: 2px;
+    padding: 8px 12px;
+    color: #0D28A6;
+    font-size: 14px;
+    font-weight: 700;
+    background-color: white;
+}
+
+.pdf-viewer{
+    display: flex;
+    justify-content: center;
+    margin-top: 24px;
+}

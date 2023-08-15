@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { Col, Container, Row } from "react-bootstrap";
-import "/src/components/Payment/boxDetail.css";
+import "./boxDetail.css";
 
 const BoxDetail = ({ data }) => {
   const replaceCategory = (category) => {

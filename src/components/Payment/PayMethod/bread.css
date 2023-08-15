@@ -1,0 +1,47 @@
+.bread-comp{
+    display: flex;
+    color: black;
+    align-items: center;
+    justify-content: end;
+    width: auto;
+    height: 206px;
+}
+
+.back-page {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 16px;
+    height: 206px;
+}
+
+.breadcrumb-container{
+    background-color: #F1F3FF;
+}
+
+.circle-id{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    font-size: 12px;
+    margin-right: 8px;
+}
+
+.circle-id.active{
+    background-color: blue;
+    color: white;
+}
+
+.circle-id.inactive{
+    border: 1px solid blue;
+    color: blue;
+}
+
+.tittle-crumb{
+    font-size: 12px;
+    font-weight: 400;
+    margin-right: 4px;
+}

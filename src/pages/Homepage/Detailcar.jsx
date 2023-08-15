@@ -27,6 +27,7 @@ const Detailcar = () => {
   const [isDateSelected, setIsDateSelected] = useState(false);
   const navigate = useNavigate();
   let { id } = useParams();
+  const token = localStorage.getItem("token");
 
   // console.log(id)
 
@@ -69,6 +70,9 @@ const Detailcar = () => {
   };
 
   const handlePayment = () => {
+    if (!token) {
+      navigate("/login");
+    }
     const formData = {
       start_rent_at: form.start_rent_at,
       finish_rent_at: form.finish_rent_at,

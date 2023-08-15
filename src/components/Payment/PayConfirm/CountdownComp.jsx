@@ -119,7 +119,7 @@ const CountdownComp = ({ bankData, data }) => {
                   <input
                     className="totalPrice-input"
                     type="text"
-                    value={"Rp. " + data?.total_price}
+                    value={"Rp. " + data?.total_price?.toLocaleString("id-ID")}
                   />
                 </div>
               </div>

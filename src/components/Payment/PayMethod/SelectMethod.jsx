@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Button, Card, Col, Container, Row } from "react-bootstrap";
-import "/src/components/Payment/selectMethod.css";
+import "./selectMethod.css";
 import { useNavigate, useParams } from "react-router-dom";
 
 const SelectMethod = ({ data }) => {

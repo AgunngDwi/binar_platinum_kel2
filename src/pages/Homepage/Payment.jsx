@@ -1,11 +1,9 @@
 import React, { useEffect, useState } from "react";
 import NavbarMain from "../../components/Homepage/NavbarMain";
-import HeroSection from "../../components/Homepage/HeroSection";
 import Footer from "../../components/Homepage/Footer";
-import { Container, Row, Col, Card } from "react-bootstrap";
-import BreadcrumbComp from "../../components/Payment/Breadcrumb";
-import SelectMethod from "../../components/Payment/SelectMethod";
-import BoxDetail from "../../components/Payment/BoxDetail";
+import BreadcrumbComp from "../../components/Payment/PayMethod/Breadcrumb";
+import SelectMethod from "../../components/Payment/PayMethod/SelectMethod";
+import BoxDetail from "../../components/Payment/PayMethod/BoxDetail";
 import { useParams } from "react-router-dom";
 import axios from "axios";
 
@@ -30,10 +28,28 @@ const Payment = () => {
     getDetailOrder();
   }, []);
 
+  const breadCrumb = [
+    {
+      id: 1,
+      name: "Pilih Metode",
+      active: true,
+    },
+    {
+      id: 2,
+      name: "Bayar",
+      active: false,
+    },
+    {
+      id: 3,
+      name: "Tiket",
+      active: false,
+    },
+  ];
+
   return (
     <div>
       <NavbarMain />
-      <BreadcrumbComp />
+      <BreadcrumbComp stepper={breadCrumb} />
       <BoxDetail data={data} />
       <SelectMethod data={data} />
       <Footer />
