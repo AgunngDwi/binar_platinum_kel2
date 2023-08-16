@@ -9,13 +9,17 @@ const onLogin = (data) =>(dispatch) => {
     axios
     .post("https://api-car-rental.binaracademy.org/customer/auth/login", data)
     .then((res) => {
+        localStorage.setItem("token", res.data.access_token)
+        localStorage.setItem("role", res.data.role)
         dispatch({
             type:"GET_LOGIN_SUCCESS",
             payload: res.data.access_token,
             getRole:res.data.role,
             isLoading:false
             })
-        window.history.go(-1);
+            setTimeout(() =>{
+            window.history.go(-1);
+        }, 3000)
         })
     .catch((err) => {
         dispatch({
@@ -25,3 +29,6 @@ const onLogin = (data) =>(dispatch) => {
         }) 
     });
   };
+
+
+  export default onLogin
