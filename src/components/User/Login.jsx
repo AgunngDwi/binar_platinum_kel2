@@ -3,6 +3,8 @@ import { Button, Col, Container, Image, Row } from "react-bootstrap";
 import "./LoginUser.css";
 import { useNavigate } from "react-router";
 import axios from "axios";
+import { useDispatch, useSelector } from "react-redux";
+import authReducer from "../../redux/reducers/authReducer";
 
 const Login = () => {
   const [form, setForm] = useState({
@@ -33,7 +35,6 @@ const Login = () => {
         localStorage.setItem("role", res.data.role);
         setSucc(alert("ANDA BERHASIL LOGIN"));
         window.history.go(-1);
-        // navigate ('/')
       })
       .catch((err) => {
         if (err.code === "ERR_BAD_REQUEST") {
@@ -44,49 +45,54 @@ const Login = () => {
   };
 
   return (
-    <div className="login-user-container">
-      <Container>
-        <Row className="login-parent">
-          <Col className="login-wrapper">
-            <div className="login-logo"></div>
-            <div className="login-tittle">
-              <h1>Welcome Back!</h1>
-            </div>
-            <div className="login-input">
-              <label htmlFor="">Email</label>
-              <input
-                type="text"
-                placeholder="johndee@gmail.com"
-                onChange={handleChange}
-                value={form.email}
-                name="email"
-              />
-            </div>
-            <div className="login-input">
-              <label htmlFor="">Password</label>
-              <input
-                type="password"
-                placeholder="6+ karakter"
-                onChange={handleChange}
-                value={form.password}
-                name="password"
-              />
-              <br />
-              <Button variant="primary" onClick={handleSubmit}>
-                {load ? "loading..." : "Sign in"}
-              </Button>
-            </div>
-            <br />
-            <div className="signup-account">
-              <a>Don't Have Account? </a>
-              <a href="/register">Sign Up for Free</a>
-            </div>
-          </Col>
-          <Col className="image-wrapper">
-            <img src="/src/assets/img/backgroundSign.svg" alt="" />
-          </Col>
-        </Row>
-      </Container>
+    <div className="d-lg-flex">
+      <Col className="login-wrapper">
+        <div className="login-logo"></div>
+        <div className="login-tittle">
+          <h1>Welcome Back!</h1>
+        </div>
+        <div className="login-input">
+          <label htmlFor="">Email</label>
+          <input
+            type="text"
+            placeholder="johndee@gmail.com"
+            onChange={handleChange}
+            value={form.email}
+            name="email"
+          />
+        </div>
+        <div className="login-input">
+          <label htmlFor="">Password</label>
+          <input
+            type="password"
+            placeholder="6+ karakter"
+            onChange={handleChange}
+            value={form.password}
+            name="password"
+          />
+          <br />
+          <Button variant="primary" onClick={handleSubmit}>
+            {load ? "loading..." : "Sign in"}
+          </Button>
+        </div>
+        <br />
+        <div className="signup-account">
+          <a>Don't Have Account? </a>
+          <a href="/register">Sign Up for Free</a>
+        </div>
+      </Col>
+      <Col
+        lg={6}
+        className="image-wrapper"
+        style={{ backgroundColor: "#0d28a6" }}
+      >
+        <Image
+          fluid
+          className="d-none d-lg-block d-xl-block"
+          src="/src/assets/img/backgroundSign.svg"
+          style={{ height: "100vh", width: "auto" }}
+        />
+      </Col>
     </div>
   );
 };
