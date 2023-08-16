@@ -3,24 +3,24 @@ import { Container } from "react-bootstrap";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
-import testiImg from "../../assets/img/img_photo (1).svg";
-import testi2Img from "../../assets/img/img_photo.svg";
+import testimonialImg from "../../assets/img/img_photo.svg";
+import testimonialImg2 from "../../assets/img/img_photo (1).svg";
 
 const testimonial = [
   {
-    image: <img src={testiImg} alt="" />,
+    image: <img src={testimonialImg} alt="" />,
     rating: 5,
     text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.",
     name: "John Dee, 32, Bromo",
   },
   {
-    image: <img src={testi2Img} alt="" />,
+    image: <img src={testimonialImg2} alt="" />,
     rating: 4,
     text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.",
     name: "John Dee, 32, Bromo",
   },
   {
-    image: <img src={testiImg} alt="" />,
+    image: <img src={testimonialImg} alt="" />,
     rating: 5,
     text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.",
     name: "John Dee, 32, Bromo",
@@ -62,7 +62,7 @@ const Testimony = () => {
                 return (
                   <div className="testimony-card-warp" key={index}>
                     <div className="testimony-image">
-                      <img src={item.image} alt="" />
+                      <p>{item.image}</p>
                     </div>
                     <div className="testimony-detail">
                       <StarRating rating={item.rating} />
