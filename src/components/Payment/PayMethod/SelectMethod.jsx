@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Button, Card, Col, Container, Row } from "react-bootstrap";
 import "./selectMethod.css";
 import { useNavigate, useParams } from "react-router-dom";
-import bankCheckImg from "../../../assets/icon/symbol/fi_check.svg";
+import bankCheckImg from "../../../assets/icon/symbol/fi_check.png";
 import imgUser from "../../../assets/icon/symbol/fi_users.svg";
 
 const SelectMethod = ({ data }) => {
