@@ -3,7 +3,7 @@ import React from "react";
 import { useState } from "react";
 import { Button, Col, Container, Image, Row } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
-import "./register.css";
+import "./Register.css";
 
 const Register = () => {
   const [form, setForm] = useState({
