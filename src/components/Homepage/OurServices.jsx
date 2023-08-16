@@ -1,26 +1,27 @@
 import React from "react";
 import { Container } from "react-bootstrap";
 import img_service from "../../assets/img/img_service.svg";
+import icon_check from "../../assets/icon/symbol/iconcheck.svg";
 
 const listService = [
   {
-    icon: <img src="/src/assets/icon/iconcheck.svg" alt="" />,
+    icon: <img src={icon_check} alt="" />,
     detail: "Sewa Mobil Dengan Supir di Bali 12 Jam",
   },
   {
-    icon: <img src="/src/assets/icon/iconcheck.svg" alt="" />,
+    icon: <img src={icon_check} alt="" />,
     detail: "Sewa Mobil Lepas Kunci di Bali 24 Jam",
   },
   {
-    icon: <img src="/src/assets/icon/iconcheck.svg" alt="" />,
+    icon: <img src={icon_check} alt="" />,
     detail: "Sewa Mobil Jangka Panjang Bulanan",
   },
   {
-    icon: <img src="/src/assets/icon/iconcheck.svg" alt="" />,
+    icon: <img src={icon_check} alt="" />,
     detail: "Gratis Antar - Jemput Mobil di Bandara",
   },
   {
-    icon: <img src="/src/assets/icon/iconcheck.svg" alt="" />,
+    icon: <img src={icon_check} alt="" />,
     detail: "Layanan Airport Transfer / Drop In Out",
   },
 ];

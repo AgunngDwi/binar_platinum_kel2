@@ -15,6 +15,7 @@ import axios from "axios";
 import { useDispatch, useSelector } from "react-redux";
 import authReducer from "../../redux/reducers/authReducer";
 import onLogin from "../../redux/actions/authAction";
+import imgBgSign from "../../assets/img/backgroundSign.svg";
 
 const Login = () => {
   const dispatch = useDispatch();
@@ -146,7 +147,7 @@ const Login = () => {
         <Image
           fluid
           className="d-none d-lg-block d-xl-block"
-          src="/src/assets/img/backgroundSign.svg"
+          src={imgBgSign}
           style={{ height: "100vh", width: "auto" }}
         />
       </Col>

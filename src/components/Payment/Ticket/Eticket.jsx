@@ -3,6 +3,8 @@ import "./eTicket.css";
 import { Container, Row, Col } from "react-bootstrap";
 import InvoicePdf from "./InvoicePdf";
 import { PDFDownloadLink, PDFViewer } from "@react-pdf/renderer";
+import succTicket from "../../../assets/icon/symbol/success.svg";
+import downButton from "../../../assets/icon/symbol/fi_download.svg";
 
 const eTicket = ({ dataOrder }) => {
   console.log("ini page ticket", dataOrder);
@@ -10,7 +12,7 @@ const eTicket = ({ dataOrder }) => {
     <div>
       <Container className="ticket-container">
         <Row className="successPay-wrap">
-          <img src="/src/assets/icon/success.svg" alt="success" />
+          <img src={succTicket} alt="success" />
           <h6>Pembayaran Berhasil</h6>
           <p>Tunjukkan invoice ini ke petugas BCR di titik temu.</p>
         </Row>
@@ -25,7 +27,7 @@ const eTicket = ({ dataOrder }) => {
               fileName="invoice.pdf"
             >
               <button>
-                <img src="/src/assets/icon/fi_download.svg" alt="" />
+                <img src={downButton} alt="" />
                 Unduh
               </button>
             </PDFDownloadLink>

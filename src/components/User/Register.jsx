@@ -3,6 +3,7 @@ import React from "react";
 import { useState } from "react";
 import { Button, Col, Container, Image, Row } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
+import imgBgSign from "../../assets/img/backgroundSign.svg";
 import "./Register.css";
 
 const Register = () => {
@@ -102,7 +103,7 @@ const Register = () => {
         <Image
           fluid
           className="d-none d-lg-block d-xl-block"
-          src="/src/assets/img/backgroundSign.svg"
+          src={imgBgSign}
           style={{ height: "100vh", width: "auto" }}
         />
       </Col>

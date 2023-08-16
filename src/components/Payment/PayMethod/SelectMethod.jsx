@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import { Button, Card, Col, Container, Row } from "react-bootstrap";
 import "./selectMethod.css";
 import { useNavigate, useParams } from "react-router-dom";
+import bankCheckImg from "../../../assets/icon/symbol/fi_check.svg";
+import imgUser from "../../../assets/icon/symbol/fi_users.svg";
 
 const SelectMethod = ({ data }) => {
   let { id } = useParams();
@@ -81,7 +83,7 @@ const SelectMethod = ({ data }) => {
                   {item.fullName}
                   <div className="checklist">
                     {selectedBank && selectedBank.idBank === item.idBank ? (
-                      <img src="/src/assets/icon/fi_check.png" />
+                      <img src={bankCheckImg} />
                     ) : (
                       ""
                     )}
@@ -94,11 +96,7 @@ const SelectMethod = ({ data }) => {
           <Col className="payment-detail">
             <p className="tittle-detail-payment1">{data?.Car?.name}</p>
             <p style={{ color: "#8A8A8A" }}>
-              <img
-                className="img-categoryorder"
-                src="/src/assets/icon/fi_users.svg"
-                alt=""
-              />
+              <img className="img-categoryorder" src={imgUser} alt="" />
               {replaceCategory(data?.Car?.category)}
             </p>
             <div className="total-price-order">
