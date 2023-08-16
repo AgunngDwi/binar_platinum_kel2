@@ -15,6 +15,7 @@ import {
   Container,
   CardImg,
 } from "react-bootstrap";
+import iconCategory from "../../assets/icon/symbol/fi_users.svg";
 
 const Detailcar = () => {
   const [form, setForm] = useState({
@@ -175,7 +176,7 @@ const Detailcar = () => {
               <Card.Body>
                 <Card.Title>{data.name}</Card.Title>
                 <Card.Text className="car-category">
-                  <img src="/src/assets/icon/fi_users.svg" />
+                  <img src={iconCategory} />
                   {replaceCategory(data.category)}
                 </Card.Text>
                 <label className="label-card" htmlFor="">

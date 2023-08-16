@@ -3,6 +3,7 @@ import { Breadcrumb } from "react-bootstrap";
 import { BreadcrumbItem, Col, Container, Row } from "react-bootstrap";
 import "./bread.css";
 import { useLocation, useParams } from "react-router-dom";
+import iconLeftArr from "../../../assets/icon/symbol/fi_arrow-left.png";
 
 const BreadcrumbComp = ({ bankData, stepper }) => {
   const { id } = useParams();
@@ -17,7 +18,7 @@ const BreadcrumbComp = ({ bankData, stepper }) => {
         <Row className="breadcrumb-row">
           <Col className="back-page">
             <a style={{ cursor: "pointer" }} onClick={backPage}>
-              <img src="/src/assets/icon/fi_arrow-left.png" alt="" />
+              <img src={iconLeftArr} alt="" />
             </a>
             {!bankData ? (
               <p>Pembayaran</p>
