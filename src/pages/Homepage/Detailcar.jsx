@@ -16,6 +16,7 @@ import {
   CardImg,
 } from "react-bootstrap";
 import iconCategory from "../../assets/icon/symbol/fi_users.svg";
+import SearchDetail from "../../components/Homepage/SearchDetail";
 
 const Detailcar = () => {
   const [form, setForm] = useState({
@@ -114,6 +115,7 @@ const Detailcar = () => {
     <div>
       <NavbarMain />
       <HeroSection showButton={false} />
+      <SearchDetail data={data} />
       <Container>
         <Row>
           <Col>
@@ -189,7 +191,7 @@ const Detailcar = () => {
                   onChange={handleDateSelect}
                 />
                 <Card.Title className="price-car">
-                  Total Rp.{data.price}
+                  Total Rp.{data.price?.toLocaleString("id-ID")}
                 </Card.Title>
                 <Button
                   className="button-card"
