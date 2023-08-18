@@ -25,9 +25,9 @@ const SearchDetail = ({ data }) => {
 
   const replaceStatus = (status) => {
     switch (status) {
-      case "true":
-        return "Disewakan";
       case "false":
+        return "Disewakan";
+      case "true":
         return "Tidak Disewakan";
     }
   };

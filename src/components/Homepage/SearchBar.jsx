@@ -112,8 +112,8 @@ const SearchBar = () => {
                 onChange={handleIsRentedChange}
               >
                 <option value=""></option>
-                <option value="true">Disewa</option>
-                <option value="false">Tidak Disewa</option>
+                <option value="false">Disewakan</option>
+                <option value="true">Tidak Disewakan</option>
               </select>
             </div>
             <div className="search-buttons">
