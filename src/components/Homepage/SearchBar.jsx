@@ -52,7 +52,9 @@ const SearchBar = () => {
         .includes(carName.toLowerCase());
       const isCategoryMatch = category ? car.category === category : true;
       const isPriceMatch = price ? car.price === parseInt(price) : true;
-      const isRentedMatch = car.status.toString() === isRented;
+      const isRentedMatch = isRented
+        ? car.status.toString() === isRented
+        : true;
 
       return isCarNameMatch && isCategoryMatch && isPriceMatch && isRentedMatch;
     });
