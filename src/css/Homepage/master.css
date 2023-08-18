@@ -471,4 +471,27 @@ div.container{
     margin: 0 auto;
 }
 
+.search-warp{
+    display: flex;
+    flex-direction: column;
+    position: inherit;
+    align-items: flex-start;
+    margin: 0 auto;
+    gap: 10px;
+}
+
+.search-container.row{
+    width: auto;
+    height: auto;
+}
+
+.search-label{
+    display: flex;
+    flex-direction: column;
+}
+
+.search-button{
+    width: 208px;
+    margin: 15px 0px 15px 0;
+}
 }

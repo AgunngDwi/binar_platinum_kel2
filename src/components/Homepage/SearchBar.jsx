@@ -71,7 +71,7 @@ const SearchBar = () => {
       <Container>
         <Row className="search-container">
           <Col className="search-warp">
-            <div className="search-car">
+            <div className="search-label">
               <label htmlFor="carName">Nama Mobil</label>
               <input
                 type="text"
@@ -80,7 +80,7 @@ const SearchBar = () => {
                 onChange={handleCarNameChange}
               />
             </div>
-            <div className="search-category">
+            <div className="search-label">
               <label htmlFor="category">Kategori</label>
               <select
                 name="list-category"
@@ -94,7 +94,7 @@ const SearchBar = () => {
                 <option value="large">6 - 8 orang</option>
               </select>
             </div>
-            <div className="search-price">
+            <div className="search-label">
               <label htmlFor="price">Harga</label>
               <input
                 type="text"
@@ -103,7 +103,7 @@ const SearchBar = () => {
                 onChange={handlePriceChange}
               />
             </div>
-            <div className="search-is-rented">
+            <div className="search-label">
               <label htmlFor="isRented">Status</label>
               <select
                 name="list-is-rented"
