@@ -25,6 +25,11 @@ const styles = StyleSheet.create({
     fontSize: 12,
     marginBottom: 10,
   },
+  textDetail: {
+    marginTop: 50,
+    fontSize: 12,
+    marginBottom: 10,
+  },
   image: {
     marginVertical: 15,
     marginHorizontal: 100,
@@ -42,9 +47,9 @@ const InvoicePdf = ({ dataInvoice }) => {
   };
 
   const dateOrder = formatDate(dataInvoice?.updatedAt);
+  const startDay = formatDate(dataInvoice?.start_rent_at);
+  const finishDay = formatDate(dataInvoice?.finish_rent_at);
   const image = dataInvoice?.slip;
-
-  console.log(image);
 
   console.log("invoice", dataInvoice);
   return (
@@ -57,9 +62,19 @@ const InvoicePdf = ({ dataInvoice }) => {
           </Text>
           <Text style={styles.text}>User: {dataInvoice?.User?.email}</Text>
           <Text style={styles.text}>Date: {dateOrder}</Text>
+          <Text style={styles.textDetail}>Berikut rincian pesanan anda :</Text>
+          <Text style={styles.text}>Mobil : {dataInvoice?.Car?.name}</Text>
           <Text style={styles.text}>
-            Total Amount: {dataInvoice?.total_price}
+            Tanggal Sewa : {startDay} s.d {finishDay}
           </Text>
+          <Text style={styles.text}>
+            Total Amount: {dataInvoice?.total_price?.toLocaleString("id-ID")}
+          </Text>
+          <Text style={styles.textDetail}>
+            Terimakasih atas kepercayaan anda menggunakan rental kami.
+          </Text>
+          <Text style={styles.text}>TTD</Text>
+          <Text style={styles.textDetail}>BCR</Text>
           <Image source={{ uri: image }} />
         </View>
       </Page>
